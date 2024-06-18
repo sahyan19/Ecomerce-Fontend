@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Boutique De Vêtements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="siteName"></h1>
+        <p id="siteDescription"></p>
+    </header>
+
+    <nav>
+        <div class="Panier-Produits">
+            <a href="#" onclick="afficherTousLesProduits()">Produits</a>
+            <a href="#" onclick="afficherPagePanier()">Panier</a>
+        </div>
+        <ul id="categories"></ul>
+    </nav>
+
+    <main>
+        <section id="produits-section" class="produits-section">
+            <input type="text" id="search" placeholder="Rechercher des produits" oninput="rechercherProduits()">
+            <h2>Tous les Produits</h2>
+            <div id="liste-tous-produits"></div>
+            <div id="pagination"></div>
+        </section>
+
+        <section id="panier-section" class="hidden">
+            <h2>Mon Panier</h2>
+            <ul id="liste-panier"></ul>
+            <p>Total: <span id="total"></span> €</p>
+            <input class="barSearch" type="text" id="code-promo" placeholder="Code Promo">
+            <button onclick="appliquerCodePromo()">Appliquer Code Promo</button>
+            <button onclick="retournerAuxProduits()">Retour aux produits</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
